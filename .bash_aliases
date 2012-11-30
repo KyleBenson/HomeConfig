@@ -1,8 +1,8 @@
-if [ ! -f /usr/bin/em -a ! `which em` ]
+if [ ! `which em` ]
 then alias em='emacs -nw'
 fi
 
-if [ ! -f /usr/bin/agrader -a ! `which agrader` ]
+if [ ! `which agrader` ]
 then alias agrader='/home/kyle/repos/Agrader/agrader.py'
 fi
 
