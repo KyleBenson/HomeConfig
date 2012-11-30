@@ -17,3 +17,4 @@ alias o='popd'
 alias op='gnome-open'
 
 alias coffeebot='ssh -Y kebenson@coffeebot'
+alias sentinel='ssh -Y kebensons@sentinel'
