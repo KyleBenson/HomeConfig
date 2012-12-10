@@ -1,9 +1,17 @@
+# Really helpful quick shortcut to non-GUI emacs for ALL users (esp root!)
 if [ ! `which em` ]
-then alias em='emacs -nw'
+then
+command="echo '#! /bin/bash' > /usr/bin/em"
+echo $command
+sudo bash -c "$command"
+command="echo 'emacs -nw"' $@'"' >> /usr/bin/em"
+echo $command
+sudo bash -c "$command"
+sudo bash -c 'sudo chmod a+x /usr/bin/em'
 fi
 
 if [ ! `which agrader` ]
-then alias agrader='/home/kyle/repos/Agrader/agrader.py'
+then alias agrader='/home/kebenson/repos/Agrader/agrader.py'
 fi
 
 alias cdns='cd ~/progs/ns-allinone-3.15/ns-3.15'
