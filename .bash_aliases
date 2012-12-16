@@ -17,4 +17,8 @@ alias o='popd'
 alias op='gnome-open'
 alias susp='sudo pm-suspend'
 
+# backup your entire installation
+alias backup='tar cvpzf $1 --exclude=/proc --exclude=/lost+found --exclude=/mnt --exclude=/sys /'
+
+## Sync your personal shortcuts with Ubuntu One
 source ~/Ubuntu\ One/.personal_aliases
