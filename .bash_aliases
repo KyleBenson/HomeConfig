@@ -24,7 +24,9 @@ alias susp='sudo pm-suspend'
 BACKUP_PATH=/media/data/backup/
 if [ "$BACKUP_PATH" ]
 then
-sudo mkdir -p $BACKUP_PATH
+if [ ! -d $BACKUP_PATH ]
+then sudo mkdir -p $BACKUP_PATH
+fi
 # add datetime to backup name
 # NOTE: I don't backup downloads as I treat that as a temp directory
 # NOTE: I don't backup media, careful adding other drives/partitions to the list
