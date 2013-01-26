@@ -7,7 +7,8 @@ sudo apt-get install gcc g++ python python-dev mercurial bzr gdb valgrind gsl-bi
 sudo apt-get install python-scipy ipython python-matplotlib
 
 # LaTeX stuff
-sudo apt-get install texlive texlive-extra-utils texlive-latex-extra kile texlive-publishers texstudio
+# okular works well for viewing PDFs through kile
+sudo apt-get install texlive texlive-extra-utils texlive-latex-extra kile texlive-publishers texstudio okular
 
 # Random utils I like
 sudo apt-get install emacs git konsole gimp
