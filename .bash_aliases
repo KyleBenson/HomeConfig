@@ -20,6 +20,21 @@ alias o='popd'
 alias op='gnome-open'
 alias susp='sudo pm-suspend'
 
+### File conversion shortcuts ###
+
+if [ ! `which pdf2svg` ]
+then
+command="echo '#! /bin/bash' > /usr/bin/pdf2svg"
+echo $command
+sudo bash -c "$command"
+command="echo 'inkscape --without-gui --file="'$1'" --export-plain-svg="'$2'"' >> /usr/bin/pdf2svg"
+echo $command
+sudo bash -c "$command"
+sudo bash -c 'sudo chmod a+x /usr/bin/pdf2svg'
+fi
+
+
+##################################
 # backup your entire installation
 BACKUP_PATH=/media/data/backup/
 if [ "$BACKUP_PATH" ]
