@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Force Quit
+Comment=Force Kill an Unresponsive Running Application or Window
+Exec=xkill
+Icon=gnome-panel-force-quit
+Terminal=false
+Type=Application
+StartupNotify=true
