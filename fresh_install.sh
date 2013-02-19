@@ -11,4 +11,4 @@ sudo apt-get install python-scipy ipython python-matplotlib
 sudo apt-get install texlive texlive-extra-utils texlive-latex-extra kile texlive-publishers texstudio okular
 
 # Random utils I like
-sudo apt-get install emacs git konsole gimp
+sudo apt-get install emacs git konsole gimp gparted
