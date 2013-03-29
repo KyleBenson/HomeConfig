@@ -19,6 +19,7 @@ alias p='pushd'
 alias o='popd'
 alias op='gnome-open'
 alias susp='sudo pm-suspend'
+alias apt-search='sudo apt-cache search'
 
 ### File conversion shortcuts ###
 
