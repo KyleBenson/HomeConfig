@@ -17,5 +17,10 @@
 (add-to-list 'ac-dictionary-directories "~/.emacs.d//ac-dict")
 (ac-config-default)
 
-;;TODO: get this working
+;;TODO: get this working.  Think I give up...
 ;;(require 'gccsense)
+
+;; CEDET
+(load-file "~/cedet-1.1/common/cedet.el")
+(global-ede-mode 1)                      ; Enable the Project management system
+(semantic-load-enable-code-helpers)      ; Enable prototype help and smart completion 

@@ -20,6 +20,7 @@ alias o='popd'
 alias op='gnome-open'
 alias susp='sudo pm-suspend'
 alias apt-search='sudo apt-cache search'
+alias apt-install='sudo apt-get install -y'
 
 ### File conversion shortcuts ###
 
