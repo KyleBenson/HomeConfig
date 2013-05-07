@@ -108,3 +108,6 @@ fi
 export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
 export LESS=' -R '
 source /usr/local/bin/virtualenvwrapper.sh
+
+# Add repository directory to python path
+export PYTHONPATH="$HOME/repos"
