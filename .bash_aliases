@@ -22,6 +22,8 @@ alias susp='sudo pm-suspend'
 alias apt-search='sudo apt-cache search'
 alias apt-install='sudo apt-get install -y'
 
+alias ml='matlab -nodesktop -nosplash'
+
 ### File conversion shortcuts ###
 
 if [ ! `which pdf2svg` ]
