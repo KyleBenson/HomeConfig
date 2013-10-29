@@ -26,5 +26,5 @@
 (semantic-load-enable-code-helpers)      ; Enable prototype help and smart completion 
 
 ;; MATLAB mode
-(add-to-list 'load-path "~/path/to/matlab_el")
+(add-to-list 'load-path "~/progs/matlab-emacs/")
 (require 'matlab-load)
