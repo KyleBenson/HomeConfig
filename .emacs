@@ -24,3 +24,7 @@
 (load-file "~/cedet-1.1/common/cedet.el")
 (global-ede-mode 1)                      ; Enable the Project management system
 (semantic-load-enable-code-helpers)      ; Enable prototype help and smart completion 
+
+;; MATLAB mode
+(add-to-list 'load-path "~/path/to/matlab_el")
+(require 'matlab-load)
