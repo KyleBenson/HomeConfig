@@ -37,9 +37,12 @@ sudo bash -c "$command"
 sudo bash -c 'sudo chmod a+x /usr/bin/pdf2svg'
 fi
 
+### Memoralbe aliases to programs I found useful ###
+alias pdfcat='pdfchain'
 
 ##################################
 # backup your entire installation
+# DOESN'T ACTUALLY WORK, just theoretical
 BACKUP_PATH=/media/data/backup/
 if [ "$BACKUP_PATH" ]
 then
