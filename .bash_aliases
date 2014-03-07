@@ -1,6 +1,8 @@
 ## Sync your personal shortcuts with Ubuntu One
 source ~/Ubuntu\ One/.personal_aliases
 
+alias sheevaprobe="modprobe ftdi_sio vendor=0x9e88 product=0x9e8f"
+
 # Really helpful quick shortcut to non-GUI emacs for ALL users (esp root!)
 if [ ! `which em` ]
 then
