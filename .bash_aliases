@@ -2,7 +2,8 @@
 source ~/Ubuntu\ One/.personal_aliases
 
 alias sheevaprobe="modprobe ftdi_sio vendor=0x9e88 product=0x9e8f"
-alias cdwine="cd /srv/wine_app_project/; workon wine_app"
+alias cdwineserver="cd /srv/wine_app_server/; workon wine_app"
+alias cdwine="cd /mnt/fast_data/wine_app_server/"
 
 # Really helpful quick shortcut to non-GUI emacs for ALL users (esp root!)
 if [ ! `which em` ]
