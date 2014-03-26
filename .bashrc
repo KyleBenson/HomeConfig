@@ -112,4 +112,4 @@ export LESS=' -R '
 source /usr/local/bin/virtualenvwrapper.sh
 
 # Add repository directory to python path
-export PYTHONPATH="$HOME/repos"
+export PYTHONPATH=$PYTHONPATH:"$HOME/repos"
