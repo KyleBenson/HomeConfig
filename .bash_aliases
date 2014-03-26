@@ -4,7 +4,15 @@ source ~/Ubuntu\ One/.personal_aliases
 alias sheevaprobe="modprobe ftdi_sio vendor=0x9e88 product=0x9e8f"
 alias cdwineserver="cd /srv/wine_app_project/server/; workon wine_app"
 alias cdwine="cd /mnt/fast_data/wine_app_project/server/"
+alias cdwinedjango="cdwineserver; cd wine_app_django"
 alias runwine="cdwineserver; cd wine_app_django; ./manage.py runserver 0.0.0.0:8000"
+
+autoschemamigration() {
+    cdwinedjango
+    ./manage.py schemamigration $1 --auto
+}
+alias wineschema=autoschemamigration
+
 
 # Really helpful quick shortcut to non-GUI emacs for ALL users (esp root!)
 if [ ! `which em` ]
