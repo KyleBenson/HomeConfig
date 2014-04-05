@@ -113,3 +113,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 # Add repository directory to python path
 export PYTHONPATH=$PYTHONPATH:"$HOME/repos"
+
+if [ `hostname` == sentinel ]; then
+    export VAGRANT_HOME="/mnt/data/.vagrant.d"
+fi
