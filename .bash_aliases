@@ -1,10 +1,29 @@
-## Sync your personal shortcuts with Ubuntu One
-source ~/Ubuntu\ One/.personal_aliases
+#!/bin/bash
 
-alias sheevaprobe="modprobe ftdi_sio vendor=0x9e88 product=0x9e8f"
+## Common directories to move to ##
+alias cdns='cd ~/repos/ns3'
 alias cdwineserver="cd /srv/wine_app_project/server/; workon wine_app"
 alias cdwine="cd /mnt/fast_data/wine_app_project/server/"
 alias cdwinedjango="cdwineserver; cd wine_app_django"
+
+## Common SSH'ed machines ##
+alias coffeebot='ssh -Y kebenson@coffeebot'
+alias sentinel='ssh -Y kebenson@sentinel'
+
+## Memorable aliases to programs I found useful ###
+alias pdfcat='pdfchain'
+
+## Useful quick shortcuts ##
+alias p='pushd'
+alias o='popd'
+alias op='gnome-open'
+alias susp='sudo pm-suspend'
+alias apt-search='sudo apt-cache search'
+alias apt-install='sudo apt-get install -y'
+alias ml='matlab -nodesktop -nosplash'
+
+## Short scripts for various projects
+alias sheevaprobe="modprobe ftdi_sio vendor=0x9e88 product=0x9e8f"
 alias runwine="cdwineserver; cd wine_app_django; ./manage.py runserver 0.0.0.0:8000"
 
 autoschemamigration() {
@@ -13,6 +32,10 @@ autoschemamigration() {
 }
 alias wineschema=autoschemamigration
 
+########################################################################################
+## Commands that are made as whole scripts, but only need to be created once,         ##
+## and so we treat them as aliases.                                                   ##
+########################################################################################
 
 # Really helpful quick shortcut to non-GUI emacs for ALL users (esp root!)
 if [ ! `which em` ]
@@ -25,17 +48,6 @@ echo $command
 sudo bash -c "$command"
 sudo bash -c 'sudo chmod a+x /usr/bin/em'
 fi
-
-## Useful shortcuts ##
-
-alias p='pushd'
-alias o='popd'
-alias op='gnome-open'
-alias susp='sudo pm-suspend'
-alias apt-search='sudo apt-cache search'
-alias apt-install='sudo apt-get install -y'
-
-alias ml='matlab -nodesktop -nosplash'
 
 ### File conversion shortcuts ###
 
@@ -50,20 +62,7 @@ sudo bash -c "$command"
 sudo bash -c 'sudo chmod a+x /usr/bin/pdf2svg'
 fi
 
-### Memoralbe aliases to programs I found useful ###
-alias pdfcat='pdfchain'
-
-##################################
-# backup your entire installation
-# DOESN'T ACTUALLY WORK, just theoretical
-BACKUP_PATH=/media/data/backup/
-if [ "$BACKUP_PATH" ]
-then
-if [ ! -d $BACKUP_PATH ]
-then sudo mkdir -p $BACKUP_PATH
-fi
-# add datetime to backup name
-# NOTE: I don't backup downloads as I treat that as a temp directory
-# NOTE: I don't backup media, careful adding other drives/partitions to the list
-alias backup='sudo tar cvpzf $BACKUP_PATH`date "+%F-%H-%M-%S"`.tgz --exclude=/proc --exclude=/lost+found --exclude=/mnt --exclude=/media --exclude=/sys --exclude=/home/*/Downloads --exclude=/home/*/.cache --exclude=/tmp --exclude=/home/*/.local/share/Trash /'
-fi
+##### some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
