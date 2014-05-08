@@ -102,9 +102,19 @@ fi
 ####################   My Stuff
 
 # env vars required for using less with source-highlight
+if [ -f /usr/share/source-highlight/src-hilite-lesspipe.sh ]
+then
 export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
 export LESS=' -R '
-source /usr/local/bin/virtualenvwrapper.sh
+fi
+
+# source various files if they exist
+for path in /usr/local/bin/virtualenvwrapper.sh ~/.localrc
+    do
+        if [ -f $path ];
+        then source /usr/local/bin/virtualenvwrapper.sh;
+        fi
+    done
 
 # Add repository directory to python path
 export PYTHONPATH=$PYTHONPATH:"$HOME/repos"
