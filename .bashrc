@@ -112,7 +112,7 @@ fi
 for path in /usr/local/bin/virtualenvwrapper.sh ~/.localrc
     do
         if [ -f $path ];
-        then source /usr/local/bin/virtualenvwrapper.sh;
+        then source $path;
         fi
     done
 
