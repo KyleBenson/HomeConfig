@@ -1,41 +1,41 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Maintainer: 
-"       Amir Salihefendic
-"       http://amix.dk - amix@amix.dk
+" Maintainer:
+" Amir Salihefendic
+" http://amix.dk - amix@amix.dk
 "
-" Version: 
-"       5.0 - 29/05/12 15:43:36
+" Version:
+" 5.0 - 29/05/12 15:43:36
 "
-" Blog_post: 
-"       http://amix.dk/blog/post/19691#The-ultimate-Vim-configuration-on-Github
+" Blog_post:
+" http://amix.dk/blog/post/19691#The-ultimate-Vim-configuration-on-Github
 "
 " Awesome_version:
-"       Get this config, nice color schemes and lots of plugins!
+" Get this config, nice color schemes and lots of plugins!
 "
-"       Install the awesome version from:
+" Install the awesome version from:
 "
-"           https://github.com/amix/vimrc
+" https://github.com/amix/vimrc
 "
 " Syntax_highlighted:
-"       http://amix.dk/vim/vimrc.html
+" http://amix.dk/vim/vimrc.html
 "
-" Raw_version: 
-"       http://amix.dk/vim/vimrc.txt
+" Raw_version:
+" http://amix.dk/vim/vimrc.txt
 "
 " Sections:
-"    -> General
-"    -> VIM user interface
-"    -> Colors and Fonts
-"    -> Files and backups
-"    -> Text, tab and indent related
-"    -> Visual mode related
-"    -> Moving around, tabs and buffers
-"    -> Status line
-"    -> Editing mappings
-"    -> vimgrep searching and cope displaying
-"    -> Spell checking
-"    -> Misc
-"    -> Helper functions
+" -> General
+" -> VIM user interface
+" -> Colors and Fonts
+" -> Files and backups
+" -> Text, tab and indent related
+" -> Visual mode related
+" -> Moving around, tabs and buffers
+" -> Status line
+" -> Editing mappings
+" -> vimgrep searching and cope displaying
+" -> Spell checking
+" -> Misc
+" -> Helper functions
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -90,7 +90,7 @@ set whichwrap+=<,>,h,l
 " Ignore case when searching
 set ignorecase
 
-" When searching try to be smart about cases 
+" When searching try to be smart about cases
 set smartcase
 
 " Highlight search results
@@ -220,7 +220,7 @@ map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 " Switch CWD to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
-" Specify the behavior when switching between buffers 
+" Specify the behavior when switching between buffers
 try
   set switchbuf=useopen,usetab,newtab
   set stal=2
@@ -230,7 +230,7 @@ endtry
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *
      \ if line("'\"") > 0 && line("'\"") <= line("$") |
-     \   exe "normal! g`\"" |
+     \ exe "normal! g`\"" |
      \ endif
 " Remember info about open buffers on close
 set viminfo^=%
@@ -293,13 +293,13 @@ vnoremap <silent> <leader>r :call VisualSelection('replace')<CR>
 " Do :help cope if you are unsure what cope is. It's super useful!
 "
 " When you search with vimgrep, display your results in cope by doing:
-"   <leader>cc
+" <leader>cc
 "
 " To go to the next search result do:
-"   <leader>n
+" <leader>n
 "
 " To go to the previous search results do:
-"   <leader>p
+" <leader>p
 "
 map <leader>cc :botright cope<cr>
 map <leader>co ggVGy:tabnew<cr>:set syntax=qf<cr>pgg
@@ -368,7 +368,7 @@ endfunction
 " Returns true if paste mode is enabled
 function! HasPaste()
     if &paste
-        return 'PASTE MODE  '
+        return 'PASTE MODE '
     en
     return ''
 endfunction
