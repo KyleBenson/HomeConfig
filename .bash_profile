@@ -139,6 +139,3 @@ fi
 # env vars required for using less with source-highlight
 export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
 export LESS=' -R '
-
-# virtualenvwrapper stuff.  the 'source' line will error if virtualenvwrapper isn't installed yet.  no problem.
-export WORKON_HOME=~/.virtualenvs
