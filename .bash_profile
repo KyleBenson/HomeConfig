@@ -155,5 +155,3 @@ export LESS=' -R '
 
 # virtualenvwrapper stuff.  the 'source' line will error if virtualenvwrapper isn't installed yet.  no problem.
 export WORKON_HOME=~/.virtualenvs
-export PROJECT_HOME=/srv/wine_app_project/
-source /usr/local/bin/virtualenvwrapper.sh
