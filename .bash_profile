@@ -138,6 +138,10 @@ if [ -f ~/.bash_prompt ]; then
     . ~/.bash_prompt
 fi
 
+if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+fi
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -155,3 +159,4 @@ export LESS=' -R '
 
 # virtualenvwrapper stuff.  the 'source' line will error if virtualenvwrapper isn't installed yet.  no problem.
 export WORKON_HOME=~/.virtualenvs
+source ~/.bash_local

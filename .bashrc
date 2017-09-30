@@ -1,6 +1,6 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
+# ~/.bashrc: executed by bash(1) for non-login interactive shells.
+# Put everything you'd want in a shell prompt (aliases, colors, env vars, etc.) in here or a script sourced from here.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-[ -n "$PS1" ] && source ~/.bash_profile
 
 #############   Tweaks found online          ##############
 
@@ -118,17 +118,16 @@ for path in /usr/local/bin/virtualenvwrapper.sh ~/.localrc
 # Add repository directory to python path
 export PYTHONPATH=$PYTHONPATH:"$HOME/repos"
 
-if [ `hostname` == sentinel ]; then
-    export VAGRANT_HOME="/mnt/data/.vagrant.d"
-fi
-
 # ONOS stuff
 
-export JAVA_HOME=/usr/lib/jvm/java-8-oracle
-# this is modified nokia version
-#export ONOS_ROOT=~/Applications/onos
+if [ -d /usr/lib/jvm/java-8-oracle ]; then
+    export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+fi
+
 export ONOS_ROOT=~/repos/onos
-source $ONOS_ROOT/tools/dev/bash_profile
+if [ -f $ONOS_ROOT/tools/dev/bash_profile ]; then
+    source $ONOS_ROOT/tools/dev/bash_profile
+fi
 
 ## Python virtual env stuff
 export WORKON_HOME=~/.venvs
