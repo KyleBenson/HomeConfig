@@ -124,9 +124,11 @@ if [ -d /usr/lib/jvm/java-8-oracle ]; then
     export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 fi
 
-export ONOS_ROOT=~/repos/onos
-if [ -f $ONOS_ROOT/tools/dev/bash_profile ]; then
-    source $ONOS_ROOT/tools/dev/bash_profile
+if [ -d ~/repos/onos ]; then
+    export ONOS_ROOT=~/repos/onos
+    if [ -f $ONOS_ROOT/tools/dev/bash_profile ]; then
+        source $ONOS_ROOT/tools/dev/bash_profile
+    fi
 fi
 
 ## Python virtual env stuff
